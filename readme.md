@@ -1,4 +1,4 @@
-Tool Wrapper v0.5 [![Build Status](https://secure.travis-ci.org/impactcentre/iif-toolwrapper.png?branch=master)](http://travis-ci.org/impactcentre/iif-toolwrapper)
+Tool Wrapper v0.5
 -----------------
  
 **About**
