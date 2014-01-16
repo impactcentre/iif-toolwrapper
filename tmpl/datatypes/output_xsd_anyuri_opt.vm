@@ -68,7 +68,11 @@
 
         try {
             if (isCreated${output_variable}) {
-                ${output_variable}FileUrl = new URL(publicHttpAccessUrl + "${output_variable}" + "/" + fileName + "." + ${output_variable}extension);
+                if (${output_variable}OutFileName.equals("")) {
+                    ${output_variable}FileUrl = new URL(publicHttpAccessUrl + "${output_variable}" + "/" + fileName + "." + ${output_variable}extension);
+                } else {
+                    ${output_variable}FileUrl = new URL(publicHttpAccessUrl + "${output_variable}" + "/" + ${output_variable}OutFileName);
+                }
             } else {
                 ${output_variable}FileUrl = new URL("http://null");
             }
@@ -85,7 +89,11 @@
         }
 
     } else {
-        ${output_variable}PublicFile = new File(${output_variable}publicOutputFileDir);
+        if (${output_variable}OutFileName.equals("")) {
+                ${output_variable}PublicFile = new File(${output_variable}publicOutputFileDir);
+        } else {
+                ${output_variable}PublicFile = new File(${output_variable}publicOutputFileDir + ${output_variable}OutFileName);
+        }
 
         try {
             org.apache.commons.io.FileUtils.copyDirectory(${output_variable}File, ${output_variable}PublicFile);
