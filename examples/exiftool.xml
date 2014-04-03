@@ -37,7 +37,7 @@
                             <Required>true</Required>
                             <CliMapping>input</CliMapping>
                             <Documentation>URL reference to image file</Documentation>
-                            <Default>https://github.com/impactcentre/iif-testfiles/raw/master/testfiles/image.tif</Default>
+                            <Default>http://github.com/impactcentre/iif-testfiles/raw/master/testfiles/image.tif</Default>
                         </input>
                     </inputs>
                     <outputs>
@@ -77,7 +77,7 @@
             or you can use just slashes,
             e.g. c:/foo/bar
             -->
-            <toolsbasedir>C:\\EXIFTOOL\\</toolsbasedir>
+            <toolsbasedir></toolsbasedir>
             <dataexchange>
                 <accessdir>../webapps/ROOT/impact/tmp/</accessdir>
                 <accessurl>http://localhost:8080/impact/tmp/</accessurl>
